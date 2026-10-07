@@ -16,9 +16,7 @@ interactively in the notebook and is not included in this repository.
 
 The target is next-day Parkinson variance:
 
-\[
-\text{target\_var}(t) = \hat{\sigma}^{2}_{P,t+1}
-\]
+target_var(t) = σ̂ _P_t+1 ^2
 
 Features are calculated using information available by the close of trading day
 \(t\), then used to forecast the next trading day \(t+1\).
