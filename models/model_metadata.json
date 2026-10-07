@@ -1,0 +1,22 @@
+{
+  "artifact_name": "har_ridge_var.joblib",
+  "artifact_sha256": "52da9c42b58671731f64f221dffed46f4aee4cf8c7828ff3c15a2b3ebd2a6ab4",
+  "artifact_bytes": 1561,
+  "feature_order": [
+    "har_d",
+    "har_w",
+    "har_m",
+    "rv_lag1",
+    "abs_return",
+    "hl_range",
+    "log_volume"
+  ],
+  "model_pipeline": [
+    "StandardScaler",
+    "Ridge(alpha=1.0)"
+  ],
+  "prediction_postprocessing": "The service returns max(raw_prediction, 0.0), because variance cannot be negative.",
+  "reference_file": "har_feature_reference.json",
+  "reference_semantics": "Training-only q10/q50/q90 statistics used for simple input reference-range warnings, not a formal drift test.",
+  "mlflow_run_id": "7eb41122022e4c23a59fe238dbb8f2d9"
+}

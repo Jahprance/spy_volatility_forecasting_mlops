@@ -1,0 +1,52 @@
+{
+  "model_name": "har_ridge_var",
+  "task": "next_day_parkinson_variance_forecasting",
+  "instrument": "SPY",
+  "feature_order": [
+    "har_d",
+    "har_w",
+    "har_m",
+    "rv_lag1",
+    "abs_return",
+    "hl_range",
+    "log_volume"
+  ],
+  "training_period": {
+    "target_start": "2006-12-21",
+    "target_end": "2023-12-29",
+    "rows": 4284
+  },
+  "validation_period": {
+    "target_start": "2024-01-02",
+    "target_end": "2025-12-31",
+    "rows": 502
+  },
+  "test_period": {
+    "target_start": "2026-01-02",
+    "target_end": "2026-10-07",
+    "rows": 192
+  },
+  "metrics": {
+    "persistence_validation": {
+      "mae": 5.3368520251554e-05,
+      "rmse": 0.00021404008600812475
+    },
+    "har_ridge_validation": {
+      "mae": 4.942483578268321e-05,
+      "rmse": 0.00019404978526034157
+    },
+    "persistence_test": {
+      "mae": 3.6043831805850876e-05,
+      "rmse": 6.17805503674088e-05
+    },
+    "har_ridge_test": {
+      "mae": 2.921160152727888e-05,
+      "rmse": 4.9570910887896796e-05
+    },
+    "validation_rmse_improvement_pct": 9.34,
+    "test_rmse_improvement_pct": 19.76,
+    "walk_forward_median_rmse_improvement_pct": 17.435000000000002
+  },
+  "promotion_decision": true,
+  "mlflow_run_id": "7eb41122022e4c23a59fe238dbb8f2d9"
+}
