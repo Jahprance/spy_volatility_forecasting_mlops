@@ -142,16 +142,20 @@ Verified in Colab:
 - Negative input rejection with HTTP 422.
 - `pytest -q` passed with 4 tests.
 
-Still to verify:
+### Verified in GitHub Actions CI
 
-- Docker build and running-container health check.
-- GitHub Actions workflow after the first push.
-- Optional public cloud deployment.
+- GitHub Actions CI ran successfully after the initial push to `main`
+- CI installed dependencies, ran the pytest suite, and built the Docker image successfully
+- The successful workflow ran for commit `cd46d54` and completed in 1 minute 1 second
+
+### Still to verify
+
+- Run the built Docker container locally and call its `/health` endpoint
+- Optional: deploy the containerized API to a public cloud service such as Google Cloud Run
 
 ## Limitations
 
-- The API accepts precomputed features. It does not fetch live market data or create
-  features from raw OHLCV requests.
+- The API accepts precomputed features. It does not fetch live market data or create features from raw OHLCV requests.
 - Parkinson variance does not fully capture overnight price gaps.
 - This is a point-forecasting model. It does not provide uncertainty intervals.
 - The input q10-q90 check is not a full drift-detection system.
